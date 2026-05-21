@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#065f46"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="20" fill="url(#g)"/>
+  <g fill="#fff">
+    <circle cx="64" cy="64" r="26" opacity="0.15"/>
+    <path d="M64 28c19.882 0 36 16.118 36 36s-16.118 36-36 36S28 83.882 28 64 44.118 28 64 28zm0 12c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24S77.255 40 64 40z"/>
+    <path d="M64 48l10 16H54l10-16zm0 32l-10-16h20L64 80z" opacity="0.9"/>
+  </g>
+  <text x="64" y="116" font-family="Segoe UI, Roboto, Arial" font-size="14" text-anchor="middle" fill="#e6fffa">TLAMATINI</text>
+</svg>

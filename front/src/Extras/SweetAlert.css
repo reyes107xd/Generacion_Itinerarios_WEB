@@ -1,0 +1,152 @@
+/* Overlay oscuro */
+.sweet-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Alerta principal */
+.sweet-alert {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Iconos */
+.alert-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.success-icon {
+  background: linear-gradient(135deg, #00A19B, #87c9b1);
+  color: #2d5530;
+}
+
+.error-icon {
+  background: linear-gradient(135deg, #ffaaa5, #ff6b6b);
+  color: #7c2d2d;
+}
+
+.warning-icon {
+  background: linear-gradient(135deg, #ffd3b6, #ffb347);
+  color: #7c5a2d;
+}
+
+.alert-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Contenido */
+.alert-content {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.alert-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.alert-message {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Botón cerrar */
+.alert-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #94a3b8;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.alert-close:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Efectos de hover para la alerta */
+.sweet-alert:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sweet-alert {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .alert-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .alert-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .alert-title {
+    font-size: 1.3rem;
+  }
+}

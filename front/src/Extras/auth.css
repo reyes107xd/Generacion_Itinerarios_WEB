@@ -1,0 +1,1072 @@
+/* Variables de color - Verde limón sutil + Negros */
+:root {
+  --lemon-green: #e8f5e8;
+  --lemon-green-dark: #d4e8d4;
+  --lemon-green-darker: #00A19B;
+  --black-soft: #2d3748;
+  --black-medium: #1a202c;
+  --black-dark: #0d1117;
+  --white: #ffffff;
+  --gray-light: #f7fafc;
+  --gray-border: #e2e8f0;
+  --google-blue: #4285f4;
+  --google-blue-dark: #357ae8;
+}
+
+/* Reset y estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--white);
+  color: var(--black-soft);
+}
+
+/* Contenedor principal */
+.auth-container {
+  min-height: auto 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Logo en esquina superior izquierda */
+.logo-container {
+  position: absolute;
+  top: 0.25rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.logo {
+  width: 12%;
+  border-radius: 8px;
+  padding: 0px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black-medium);
+  letter-spacing: -0.5px;
+}
+
+/* Layout de dos columnas */
+.auth-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100%;
+}
+
+/* Sección del formulario */
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--white);
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--black-medium);
+  margin-bottom: 0.5rem;
+}
+
+.form-header p {
+  color: var(--black-soft);
+  opacity: 0.7;
+}
+
+/* Formularios */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--black-medium);
+  font-size: 1rem;
+}
+
+.form-group input {
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--gray-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--white);
+  color: var(--black-dark);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--lemon-green-darker);
+  box-shadow: 0 0 0 3px rgba(184, 216, 184, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+/* Opciones del formulario */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--black-soft);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--lemon-green-darker);
+}
+
+.forgot-link {
+  background: none;
+  border: none;
+  color: var(--lemon-green-darker);
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: var(--black-medium);
+}
+
+/* Botones */
+.submit-btn {
+  background: var(--black-medium);
+  color: var(--white);
+  border: none;
+  padding: 0.725rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background: var(--lemon-green-darker);
+  transform: translateY(-1px);
+}
+
+/* Divisor */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--black-soft);
+  opacity: 0.6;
+  font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.divider span {
+  padding: 0 1rem;
+}
+
+/* Botón de Google */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--white);
+  color: var(--black-soft);
+  border: 1px solid var(--gray-border);
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.google-btn:hover {
+  background: var(--gray-light);
+  border-color: var(--lemon-green-darker);
+}
+
+.google-icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* Footer del auth */
+.auth-footer {
+  
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-border);
+  color: var(--black-soft);
+}
+
+.auth-footer p {
+  opacity: 0.8;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--lemon-green-darker);
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.link-btn:hover {
+  color: var(--black-medium);
+}
+
+/* Sección de imagen */
+
+
+.image-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Pin de ubicación */
+
+
+.pin-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pin-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black-medium);
+  margin-bottom: 0.5rem;
+}
+
+.pin-content p {
+  color: var(--black-soft);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.pin-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.pin-details span {
+  background: var(--lemon-green);
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  color: var(--black-medium);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-section {
+    display: none;
+  }
+  
+  .logo-container {
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-wrapper {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== ESTILOS DEL CARRUSEL ===== */
+
+/* Sección de imagen CON CARRUSEL */
+.image-section {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+}
+
+.location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+
+.image-section:hover .location-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  display: flex;
+  align-items: flex-end;        /* Alinea al FONDO */
+  justify-content: flex-end;    /* ← Cambia a DERECHA 111111111111111111*/ 
+  padding: 2rem;
+  z-index: 3;
+}
+
+.location-info {
+  background: rgba(255, 255, 255, 0.40);
+  padding: 1.25rem;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 260px;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  /* Se alineará automáticamente a la derecha por el justify-content */
+}
+.image-section:hover .location-info {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.55);  /* 45% transparente al hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+.location-info h3 {
+  color: var(--black-medium);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.location-info p {
+  color: var(--black-soft);
+  margin-bottom: 1rem;
+  opacity: 0.9;  /* Más legible */
+  font-size: 0.9rem;
+}
+
+.location-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.location-details span {
+  background: rgba(232, 245, 232, 0.9);  /* Verde con transparencia */
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--black-medium);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(184, 216, 184, 0.3);
+}
+
+.location-details span:hover {
+  background: rgba(184, 216, 184, 0.95);  /* Menos transparente al hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(184, 216, 184, 0.3);
+}
+
+/* Controles del carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);  /* Más transparente */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--black-medium);
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  backdrop-filter: blur(5px);
+}
+
+.image-section:hover .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn:hover {
+  background: var(--white);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+/* Indicadores de puntos */
+.carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background: var(--white);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+/* Contador del carrusel */
+.carousel-counter {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+}
+
+/* Animaciones de transición */
+.location-image {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-section {
+    display: none;
+  }
+  
+  .carousel-btn {
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .location-info {
+    max-width: 250px;
+    padding: 1rem;
+  }
+  
+  .location-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .location-details {
+    gap: 0.3rem;
+  }
+  
+  .location-details span {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/*para la transicion*/
+/* Contenedor del carrusel para transiciones */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Imágenes con transición */
+.location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Imagen activa - completamente visible */
+.location-image.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Imagen inactiva - completamente oculta */
+.location-image.inactive {
+  opacity: 0;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Durante la transición - efecto suave */
+.location-image.transitioning {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Efecto hover sutil en la imagen activa */
+.image-section:hover .location-image.active {
+  transform: scale(1.02);
+}
+
+/* Botones deshabilitados durante transición */
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}
+
+.carousel-btn:disabled:hover {
+  transform: translateY(-50%) scale(1);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Indicadores deshabilitados */
+.indicator.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Animación de entrada para la información */
+.location-info {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Tarjeta de información con transparencia */
+.location-info {
+  background: rgba(255, 255, 255, 0.40);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 260px;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.logo {
+  width: auto;
+  height: 100px;          /* Altura fija, ancho automático */
+  max-width: 120px;      /* Máximo ancho */
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1024px) {
+  .logo {
+    height: 100px;
+    max-width: 150px;
+  }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .logo-container {
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .logo {
+    height: 70px;
+    max-width: 100px;
+  }
+}
+
+.inicia_sesion_aqui{
+  font-size: 15px;
+}
+
+
+/* Estilos para validaciones */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.input-success {
+  border-color: var(--success) !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+.success-message {
+  color: var(--success);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* Botón deshabilitado */
+.submit-btn-disabled {
+  background: var(--secondary) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.submit-btn-disabled:hover {
+  background: var(--secondary) !important;
+  transform: none !important;
+}
+
+/* Indicadores de fortaleza de contraseña */
+.password-strength {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.strength-bar {
+  height: 4px;
+  background: var(--gray-border);
+  border-radius: 2px;
+  margin-top: 0.25rem;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.strength-weak {
+  background: var(--danger);
+  width: 33%;
+}
+
+.strength-medium {
+  background: var(--warning);
+  width: 66%;
+}
+
+.strength-strong {
+  background: var(--success);
+  width: 100%;
+}
+
+/* Efectos de focus mejorados */
+.form-group input:focus {
+  outline: none;
+  border-color: var(--lemon-green-darker);
+  box-shadow: 0 0 0 3px rgba(184, 216, 184, 0.1);
+}
+
+.form-group input:focus.input-error {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Indicador de requisitos de contraseña */
+.password-requirements {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(232, 245, 232, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(184, 216, 184, 0.3);
+}
+
+.password-requirements small {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password-requirements li {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.requirement-met {
+  color: var(--success) !important;
+  font-weight: 600;
+}
+
+.requirement-met::before {
+  content: "✓ ";
+  font-weight: bold;
+}
+
+/* Loading states (si no los tienes ya) */
+.submit-btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Inputs deshabilitados */
+input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Estilos para el select de género */
+select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--lemon-green-darker);
+  box-shadow: 0 0 0 3px rgba(184, 216, 184, 0.1);
+}
+
+select.input-error {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--gray-light);
+}
+
+/* Estilos para input de fecha */
+input[type="date"] {
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Estilos para input de teléfono */
+input[type="tel"] {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+/* Mejora responsive para formularios más largos */
+@media (max-width: 768px) {
+  .auth-form {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+  
+  .auth-form::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .auth-form::-webkit-scrollbar-track {
+    background: var(--gray-light);
+  }
+  
+  .auth-form::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+}
+
+/* Espaciado mejorado para formulario más largo */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-header {
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de selectores de fecha */
+.date-selectors {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.date-selector-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-selector-group select {
+  padding: 0.875rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: var(--white);
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 12px;
+}
+
+.date-selector-group select:focus {
+  outline: none;
+  border-color: var(--lemon-green-darker);
+  box-shadow: 0 0 0 3px rgba(184, 216, 184, 0.1);
+}
+
+.date-selector-group select.input-error {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.date-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Preview de fecha seleccionada */
+.date-preview {
+  background: rgba(232, 245, 232, 0.3);
+  border: 1px solid rgba(184, 216, 184, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.selected-date {
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.age-indicator {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.age-indicator span {
+  background: var(--lemon-green);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .date-selectors {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .date-selector-group select {
+    padding: 0.75rem;
+  }
+}
+
+/* Scroll para formularios largos */
+.auth-form {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.auth-form::-webkit-scrollbar {
+  width: 4px;
+}
+
+.auth-form::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+.auth-form::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}

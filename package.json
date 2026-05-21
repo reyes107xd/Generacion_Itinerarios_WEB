@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@supabase/supabase-js": "^2.83.0",
+    "chart": "^0.1.2",
+    "chart.js": "^4.5.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.24",
+    "heroicons": "^2.2.0",
+    "jspdf": "^3.0.4",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.554.0",
+    "pg": "^8.16.3",
+    "react-datepicker": "^8.9.0",
+    "socket.io-client": "^4.8.1",
+    "sweetalert2": "^11.26.3"
+  }
+}

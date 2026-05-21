@@ -1,0 +1,1 @@
+En esta carpeta van a estar las vistas del administrador, los componentes que se vayan hacer se pondran colocar en la carpeta de components
