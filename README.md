@@ -1,9 +1,130 @@
-# Proyecto itinerarios turísticos 
+# 🌎 Generacion_Itinerarios_WEB
 
-```text
-Aplicación web enfocada en la generación de itinerarios turísticos personalizados enfocados en el área metropolitana, que se compone los estados de México, Morelos, Hidalgo, Querétaro, Ciudad de México y Estado de México. La plataforma permitirá a los usuarios planificar sus viajes de acuerdo con sus preferencias turísticas, ofreciendo opciones de lugares a visitar y diversas actividades. 
+Aplicación web enfocada en la generación de itinerarios turísticos personalizados dentro de la zona metropolitana de México, incluyendo Ciudad de México, Estado de México, Morelos, Hidalgo y Querétaro.
 
-Además, la plataforma integrará funciones de red social, donde los usuarios podrán compartir sus experiencias de viaje mediante reseñas e imágenes, establecer amistades y recibir sugerencias de itinerarios a partir de los lugares visitados y recomendados por sus contactos. 
+La plataforma permite a los usuarios planificar recorridos turísticos de acuerdo con sus preferencias, descubrir nuevos lugares y compartir experiencias mediante funciones sociales integradas.
 
-Con un diseño intuitivo, accesible por diferentes navegadores y con funciones de personalización, se busca brindar una herramienta que permita planificar recorridos y descubrir nuevos lugares turísticos dentro de los estados de México. 
+---
+
+# ✨ Características principales
+
+- 🗺️ Generación de itinerarios turísticos personalizados
+- 📍 Recomendación de lugares y actividades
+- 🧭 Integración con APIs de Google Maps
+- 👥 Sistema de usuarios con login y registro
+- 💬 Chat entre usuarios y amigos
+- 🤝 Sistema de amistad entre usuarios
+- 📸 Compartir experiencias mediante imágenes y reseñas
+- ⭐ Recomendaciones basadas en intereses y lugares visitados
+- ❤️ Guardado de itinerarios favoritos
+- 🌐 Interfaz accesible desde diferentes navegadores
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+## Frontend
+- React
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+- Tailwind CSS
+
+## Backend
+- Node.js
+- JavaScript
+
+## Base de datos
+- PostgreSQL
+- Supabase (utilizado inicialmente para la base de datos)
+
+## APIs y servicios
+- Google Maps API
+
+---
+
+# 📁 Estructura del proyecto
+
+```bash
+Generacion_Itinerarios_WEB/
+│
+├── backend/
+│
+├── front/
+│
+├── package.json
+│
+└── README.md
 ```
+
+---
+
+# ⚙️ Instalación y ejecución
+
+## 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/reyes107xd/Generacion_Itinerarios_WEB.git
+```
+
+---
+
+## 2️⃣ Instalar dependencias
+
+### Frontend
+
+```bash
+cd front
+npm install
+```
+
+### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+# ▶️ Ejecutar el proyecto
+
+## Frontend
+
+```bash
+cd front
+npm run dev
+```
+
+## Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+---
+
+# 🔮 Futuras mejoras
+
+- Sistema avanzado de recomendaciones inteligentes
+- Geolocalización en tiempo real
+- Notificaciones entre usuarios
+- Optimización de rutas turísticas
+- Integración de clima y eventos
+- Aplicación móvil
+
+---
+
+# 👨‍💻 Autor
+
+**Miguel Angel Reyes Espinosa**
+
+Proyecto desarrollado en colaboración con un equipo de trabajo académico.
+
+---
+
+# 📌 Objetivo del proyecto
+
+Brindar una plataforma que facilite la planeación de recorridos turísticos y permita descubrir nuevos lugares dentro de distintos estados de México mediante una experiencia personalizada, social e interactiva.
